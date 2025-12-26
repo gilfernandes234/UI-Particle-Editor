@@ -21,6 +21,8 @@ Features:
 
 Como usar?
 
+no client:
+
 - Particle Creature:
 https://github.com/mehah/otclient/wiki/Tutorial-Attached-Effects#-4--particle
 
@@ -30,8 +32,6 @@ https://github.com/mehah/otclient/wiki/Tutorial-Attached-Effects#------42-partic
 - Particle Widget:
 https://github.com/mehah/otclient/wiki/Tutorial-Attached-Effects#------43-particle-widget
 
-
-
 ```bash
 # No otui:
 
@@ -40,6 +40,21 @@ https://github.com/mehah/otclient/wiki/Tutorial-Attached-Effects#------43-partic
     effect: custom_effect
     anchors.fill: parent
     phantom: true	
+```
+
+no servidor:
+```bash
+player:attachParticleEffect("fire-aura")
+monster:attachParticleEffect("poison-cloud")
+
+-- Remover de criatura
+player:detachParticleEffect("fire-aura")
+
+-- Anexar em posição
+Game.sendAttachParticleEffect("teleport-effect", position)
+
+-- Remover de posição
+Game.sendDetachParticleEffect("teleport-effect", position)
 ```
 
 
